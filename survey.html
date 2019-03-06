@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Destination Discoverer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h2>Survey Questions</h2>
+    <p id="instructions">Answer each question to best reflect your personality. 10 being "this is most like me" and 1
+        being "this is very unlike me". Bon voyage!<i class="fas fa-plane-departure"></i></p>
+    <!-- Name & where they live -->
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="First & Last Name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="hello for now">
+            </div>
+        </div>
+    </form>
+    <br>
+
+    <form>
+
+        <div class="form-group col-md-4">
+            <label for="inputState">I enjoy being outdoors</label>
+            <select id="q1" id="inputState" class="form-control">
+                <option selected value="1">1 (very unlike me)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 (most like me)</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="inputState">I prefer the sunset over the sunrise</label>
+            <select id="q2" id="inputState" class="form-control">
+                <option selected value="1">1 (very unlike me)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 (most like me)</option>
+            </select>
+        </div>
+
+
+        <div class="form-group col-md-4">
+            <label for="inputState">I enjoy traveling with a big group</label>
+            <select id="q3" id="inputState" class="form-control">
+                <option selected value="1">1 (very unlike me)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 (most like me)</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="inputState">I would rather spend the day at the beach rather than in the mountains</label>
+            <select id="q4" id="inputState" class="form-control">
+                <option selected value="1">1 (very unlike me)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 (most like me)</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="inputState">I don't mind long plane/car rides</label>
+            <select id="q5" id="inputState" class="form-control">
+                <option selected value="1">1 (very unlike me)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 (most like me)</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="inputState">I like going to concerts & music festivals</label>
+            <select id="q6" id="inputState" class="form-control">
+                <option selected value="1">1 (very unlike me)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 (most like me)</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="inputState">I think the best part about a trip is eating new food</label>
+            <select id="q7" id="inputState" class="form-control">
+                <option selected value="1">1 (very unlike me)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 (most like me)</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="inputState">I am a thrill seeker</label>
+            <select id="q8" id="inputState" class="form-control">
+                <option selected value="1">1 (very unlike me)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 (most like me)</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="inputState">I enjoy sleeping in</label>
+            <select id="q9" id="inputState" class="form-control">
+                <option selected value="1">1 (very unlike me)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 (most like me)</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="inputState">I could pack all of my travel necessities in a carry-on suitcase</label>
+            <select id="q10" id="inputState" class="form-control">
+                <option selected value="1">1 (very unlike me)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 (most like me)</option>
+            </select>
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="Submit">
+
+    </form>
+    <script type="text/javascript" src="server.js"></script>
+
+</body>
+
+</html>
