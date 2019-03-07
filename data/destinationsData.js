@@ -32,7 +32,7 @@ var destinationsArray = [
 		]
 	},
 	{
-		location: 'Las Vegas, NV',
+		location: "Las Vegas, NV",
 		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/vegas.jpg",
 		scores: [
 			'3',
@@ -48,7 +48,7 @@ var destinationsArray = [
 		]
 	},
 	{
-		location: 'Seattle, WA',
+		location: "Seattle, WA",
 		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/seattle.jpg",
 		scores: [
 			'5',
@@ -64,7 +64,7 @@ var destinationsArray = [
 		]
 	},
 	{
-		location: 'New York City, NY',
+		location: "New York City, NY",
 		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/nyc.jpg",
 		scores: [
 			'1',
@@ -80,7 +80,7 @@ var destinationsArray = [
 		]
 	},
 	{
-		location: 'Los Angeles, CA',
+		location: "Los Angeles, CA",
 		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/LA.jpg",
 		scores: [
 			'4',
@@ -96,7 +96,7 @@ var destinationsArray = [
 		]
 	},
 	{
-		location: 'Nashville, TN',
+		location: "Nashville, TN",
 		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/nashville.jpg",
 		scores: [
 			'2',
@@ -112,7 +112,7 @@ var destinationsArray = [
 		]
 	},
 	{
-		location: 'Austin, TX',
+		location: "Austin, TX",
 		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/austin.jpg",
 		scores: [
 			'5',
@@ -128,7 +128,7 @@ var destinationsArray = [
 		]
 	},
 	{
-		location: 'New Orleans, LA',
+		location: "New Orleans, LA",
 		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/nola.jpg",
 		scores: [
 			'2',
@@ -144,7 +144,7 @@ var destinationsArray = [
 		]
 	},
 	{
-		location: 'Honolulu, HI',
+		location: "Honolulu, HI",
 		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/honolulu.jpg",
 		scores: [
 			'5',
