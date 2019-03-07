@@ -1,162 +1,162 @@
 var destinationsArray = [
 	{
-		name: "Denver,CO",
-		photo: "denver.jpg",
+		location: "Denver,CO",
+		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/denver.jpg",
 		scores: [
+			'5',
+			'5',
+			'3',
 			'1',
+			'4',
+			'3',
+			'3',
+			'4',
+			'2',
+			'4'
+		]
+	},
+	{
+		location: "Walt Disney World (Orlando, Fl)",
+		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/disney.jpg",
+		scores: [
+			'3',
+			'5',
+			'5',
+			'2',
+			'4',
+			'4',
+			'5',
+			'5',
 			'1',
+			'2'
+		]
+	},
+	{
+		location: 'Las Vegas, NV',
+		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/vegas.jpg",
+		scores: [
+			'3',
+			'5',
+			'5',
+			'4',
 			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
+			'5',
+			'4',
+			'4',
+			'5',
 			'1'
 		]
 	},
 	{
-		name: "Walt Disney World (Orlando, Fl)",
-		photo: "",
+		location: 'Seattle, WA',
+		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/seattle.jpg",
+		scores: [
+			'5',
+			'1',
+			'2',
+			'3',
+			'3',
+			'2',
+			'3',
+			'3',
+			'2',
+			'5'
+		]
+	},
+	{
+		location: 'New York City, NY',
+		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/nyc.jpg",
 		scores: [
 			'1',
+			'5',
+			'4',
 			'1',
 			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
+			'3',
+			'5',
+			'2',
+			'5',
 			'1'
 		]
 	},
 	{
-		name: 'Las Vegas, NV',
-		photo: "",
+		location: 'Los Angeles, CA',
+		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/LA.jpg",
 		scores: [
+			'4',
 			'1',
 			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
+			'5',
+			'3',
+			'4',
+			'5',
+			'4',
+			'2',
+			'2'
+		]
+	},
+	{
+		location: 'Nashville, TN',
+		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/nashville.jpg",
+		scores: [
+			'2',
+			'3',
+			'5',
+			'5',
+			'5',
+			'5',
+			'5',
+			'3',
+			'3',
 			'1'
 		]
 	},
 	{
-		name: 'Seattle, WA',
-		photo: "",
+		location: 'Austin, TX',
+		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/austin.jpg",
 		scores: [
+			'5',
 			'1',
+			'5',
 			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1'
+			'4',
+			'5',
+			'5',
+			'5',
+			'2',
+			'4'
 		]
 	},
 	{
-		name: 'New York City, NY',
-		photo: "",
+		location: 'New Orleans, LA',
+		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/nola.jpg",
 		scores: [
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1'
+			'2',
+			'2',
+			'5',
+			'3',
+			'3',
+			'5',
+			'5',
+			'5',
+			'3',
+			'2'
 		]
 	},
 	{
-		name: 'Los Angeles, CA',
-		photo: "",
+		location: 'Honolulu, HI',
+		image: "https://github.com/CristalGomez/ExpressJS/blob/master/assets/images/honolulu.jpg",
 		scores: [
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1'
-		]
-	},
-	{
-		name: 'Nashville, TN',
-		photo: "",
-		scores: [
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1'
-		]
-	},
-	{
-		name: 'Austin, TX',
-		photo: "",
-		scores: [
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1'
-		]
-	},
-	{
-		name: 'New Orleans, LA',
-		photo: "",
-		scores: [
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1'
-		]
-	},
-	{
-		name: 'Honolulu, HI',
-		photo: "",
-		scores: [
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1'
+			'5',
+			'4',
+			'5',
+			'5',
+			'4',
+			'4',
+			'5',
+			'5',
+			'2',
+			'4'
 		]
 	}
 ];
