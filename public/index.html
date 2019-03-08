@@ -25,7 +25,7 @@
         <hr class="my-4">
 
         <div class="col-md-4 text-center">
-                <a class="btn btn-primary btn-lg" href="#" id="begin" role="button">Begin</a>
+            <a class="btn btn-primary btn-lg" href="/survey" id="beginBtn" role="button">Begin</a>
 
         </div>
 
@@ -35,9 +35,20 @@
     <p id="apiList">API Destinations List</p>
     <!-- Link to Github -->
     <p id="github">Github Repo</p>
+    <footer class="footer">
+        <div class="container">
+            <p><a href="/api/destinations">API Table Link</a> | <a href="">Github Link</a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="server.js">
+
+        $("#beginBtn").on("click", function (event) {
+            event.preventDefault();
+        })
 
 
-    <script type="text/javascript" src="server.js"></script>
+    </script>
 
 </body>
 

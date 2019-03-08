@@ -5,7 +5,6 @@ module.exports = function(app){
     app.get("/api/destinations", function(req,res){
         res.json(destinations)
     })
-};
 
 app.post("/api/destinations", function(req, res){
     var userInput = req.body;
@@ -37,3 +36,4 @@ app.post("/api/destinations", function(req, res){
 
 }); //end of app.post
 
+};
