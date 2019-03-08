@@ -10,7 +10,7 @@ app.post("/api/destinations", function(req, res){
     var userInput = req.body;
     var userScore = userInput.scores
 
-    var scoreDiff = 0;
+    var scoreDiff = 1000;
 
     for (var i = 0; i < destinations.length; i++){
         for (var x = 0; x < userInput.length; x++){
