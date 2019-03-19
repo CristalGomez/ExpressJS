@@ -200,9 +200,7 @@
 
                 var isValid = true;
                 if ($("#userName").val() === "") {
-                    isValid = false;
-                    alert("Please enter your first & last name")
-                } else if (isValid) {
+                    var isValid = true;
                     //capturing the user's input
                     var userInput = {
                         name: ("#userName").val().trim(),
@@ -219,12 +217,17 @@
                             $('#q10').val()
                         ]
                     };
-
                     $.post("/api/destinations", userInput, function (data) {
                         $('#myModal').modal({ show: true })
                         $("#matchLocation").text(data.location);
                         $("#matchImg").image(data.image);
                     })
+
+                } else if (!isValid) {
+                    alert("Please enter your name")
+
+
+
                 }
             })
         });
