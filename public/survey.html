@@ -28,7 +28,7 @@
     <!-- jquery plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- bootstrap javascript plugin -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -188,8 +188,7 @@
                 </div>
                 <div class="modal-body">
                     <p id="matchLocation"></p>
-                    <img id="matchImg" style="width:100%; height:400px" src=""
-                        alt="Match Image">
+                    <img id="matchImg" style="width:100%; height:400px" src="#" alt="Match Image">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Bon Voyage!</button>
@@ -204,45 +203,40 @@
 
         $(document).ready(function () {
 
+            var isValid = true
             $("#submitBtn").on("click", function (event) {
                 event.preventDefault();
-
-                var validateFunc = function () {
-                    var isValid = true;
-
-                    $(".form-control").each(function () {
-                        if ($("#userName").val() === "") {
-                            isValid = false;
-                        }
+                if (isValid) {
+                    //capturing the user's input
+                    var userInput = {
+                        name: $("#userName").val().trim(),
+                        scores: [
+                            $('#q1').val(),
+                            $('#q2').val(),
+                            $('#q3').val(),
+                            $('#q4').val(),
+                            $('#q5').val(),
+                            $('#q6').val(),
+                            $('#q7').val(),
+                            $('#q8').val(),
+                            $('#q9').val(),
+                            $('#q10').val()
+                        ]
+                    };
+                    console.log(userInput)
+                    $.post("/api/destinations", userInput, function (data) {
+                        console.log(data)
+                        $('#myModal').modal({ show: true })
+                        $("#matchLocation").text(data.location);
+                        $("#matchImg").attr("src", data.image)
+                        
                     })
+                } else if($("#userName").val() === ""){
+                    isValid = false
+
                 }
             });
 
-            if (validateFunc()) {
-                //capturing the user's input
-                var userInput = {
-                    name: ("#userName").val().trim(),
-                    scores: [
-                        $('#q1').val(),
-                        $('#q2').val(),
-                        $('#q3').val(),
-                        $('#q4').val(),
-                        $('#q5').val(),
-                        $('#q6').val(),
-                        $('#q7').val(),
-                        $('#q8').val(),
-                        $('#q9').val(),
-                        $('#q10').val()
-                    ]
-                };
-                $.post("/api/destinations", userInput, function (data) {
-                    $('#myModal').modal({ show: true })
-                    $("#matchLocation").html(data.location);
-                    $("#matchImg").attr("src", data.Image)
-                })
-            } else {
-                alert("fill in name")
-            }
         });
     </script>
 
