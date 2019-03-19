@@ -8,7 +8,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
     <!-- My style.css sheet -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
     <!-- jquery plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- bootstrap javascript plugin -->
@@ -198,7 +198,6 @@
             $("#submitBtn").on("click", function (event) {
                 event.preventDefault();
 
-                var isValid = true;
                 if ($("#userName").val() === "") {
                     var isValid = true;
                     //capturing the user's input

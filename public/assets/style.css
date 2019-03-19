@@ -17,3 +17,7 @@ body {
     background-color: transparent;
     text-align: center;
 }
+
+img {
+    margin-top: 10px;
+}

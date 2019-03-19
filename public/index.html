@@ -22,25 +22,43 @@
         <link rel="stylesheet" type="text/css" href="assets/style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
+
 <body>
     <!-- Header -->
-    <div class="jumbotron">
-        <h1 class="display-4">Destination<i class="fas fa-globe-americas"></i>Discoverer</h1>
-        <p id="intro" class="lead">Take this quick survey & we'll tell you where to go on vacation</p>
-        <hr class="my-4">
 
-        <div class="col-md-4 text-center">
-            <a class="btn btn-primary btn-lg" href="/survey.html" id="beginBtn" role="button">Begin</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="display-4">Destination<i class="fas fa-globe-americas"></i>Discoverer</h1>
+                <p id="intro" class="lead">Take this quick survey & we'll tell you where to go on vacation</p>
+                <div class="container text-center">
+                    <p><a href="/api/destinations">API Table Link</a> | <a
+                            href="https://github.com/CristalGomez/ExpressJS" target="blank">Github Link</a>
+                </div>
+                <hr class="my-4">
+
+                <div class="col-md-4 text-center">
+                    <a class="btn btn-primary btn-lg text-center" href="/survey.html" id="beginBtn"
+                        role="button">Begin</a>
+                </div>
+            </div>
         </div>
-
     </div>
-    <!-- End of header -->
-    <!-- Link to API List -->
-    <footer class="footer">
-        <div class="container">
-            <p><a href="/api/destinations">API Table Link</a> | <a href="https://github.com/CristalGomez/ExpressJS">Github Link</a>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="../assets/images/img1.jpg" width="100%;height:350px">
+            </div>
+            <div class="col-md-4">
+                    <img src="../assets/images/img2.jpg" width="100%;height:350px">
+            </div>
+            <div class="col-md-4">
+                    <img src="../assets/images/img3.jpg" width="100%;height:350px">
+            </div>
         </div>
-    </footer>
+    </div>
 
 </body>
 
