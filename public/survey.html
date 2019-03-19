@@ -3,6 +3,22 @@
 
 <head>
     <title>Destination Discoverer</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+
+    <!-- SnackbarJS plugin -->
+    <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
+
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+    <script>
+        $('body').bootstrapMaterialDesign();
+    </script>
     <!-- bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -172,7 +188,7 @@
                 </div>
                 <div class="modal-body">
                     <p id="matchLocation"></p>
-                    <img id="matchImg" style="width:100%; height:400px" src="../assets/images/disney.jpg"
+                    <img id="matchImg" style="width:100%; height:400px" src=""
                         alt="Match Image">
                 </div>
                 <div class="modal-footer">
@@ -187,48 +203,46 @@
     <script type="text/javascript">
 
         $(document).ready(function () {
-            //check for user's name input
-            var isValid = true;
-            if ($("#userName").val() === "") {
-                isvalid = false;
-                alert("Please enter your first & last name")
-            }
 
-            //when SubmitBtn is clicked, store user's answers
             $("#submitBtn").on("click", function (event) {
                 event.preventDefault();
 
-                if ($("#userName").val() === "") {
+                var validateFunc = function () {
                     var isValid = true;
-                    //capturing the user's input
-                    var userInput = {
-                        name: ("#userName").val().trim(),
-                        scores: [
-                            $('#q1').val(),
-                            $('#q2').val(),
-                            $('#q3').val(),
-                            $('#q4').val(),
-                            $('#q5').val(),
-                            $('#q6').val(),
-                            $('#q7').val(),
-                            $('#q8').val(),
-                            $('#q9').val(),
-                            $('#q10').val()
-                        ]
-                    };
-                    $.post("/api/destinations", userInput, function (data) {
-                        $('#myModal').modal({ show: true })
-                        $("#matchLocation").text(data.location);
-                        $("#matchImg").image(data.image);
+
+                    $(".form-control").each(function () {
+                        if ($("#userName").val() === "") {
+                            isValid = false;
+                        }
                     })
-
-                } else if (!isValid) {
-                    alert("Please enter your name")
-
-
-
                 }
-            })
+            });
+
+            if (validateFunc()) {
+                //capturing the user's input
+                var userInput = {
+                    name: ("#userName").val().trim(),
+                    scores: [
+                        $('#q1').val(),
+                        $('#q2').val(),
+                        $('#q3').val(),
+                        $('#q4').val(),
+                        $('#q5').val(),
+                        $('#q6').val(),
+                        $('#q7').val(),
+                        $('#q8').val(),
+                        $('#q9').val(),
+                        $('#q10').val()
+                    ]
+                };
+                $.post("/api/destinations", userInput, function (data) {
+                    $('#myModal').modal({ show: true })
+                    $("#matchLocation").html(data.location);
+                    $("#matchImg").attr("src", data.Image)
+                })
+            } else {
+                alert("fill in name")
+            }
         });
     </script>
 
